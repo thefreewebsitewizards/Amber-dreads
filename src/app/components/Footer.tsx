@@ -1,5 +1,4 @@
 import { Link } from 'react-router';
-import { Heart } from 'lucide-react';
 
 function TikTokIcon({ size = 20 }: { size?: number }) {
   return (
@@ -26,9 +25,9 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-3">
               <img
-                src="/Amber-dreads-logo.png"
+                src="/Amber-dreads-new-logo.png"
                 alt="Amber Dreads logo"
-                className="h-8 w-8 object-contain"
+                className="h-10 w-10 object-contain"
               />
               <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.25rem', fontWeight: 700, color: '#FAF7F2' }}>
                 Chronic Dreads
@@ -124,7 +123,7 @@ export function Footer() {
             © 2026 Chronic Dreads. All rights reserved.
           </p>
           <p className="text-xs flex items-center gap-1" style={{ color: '#7C5C48' }}>
-            Made with <Heart size={12} className="inline" style={{ color: '#C4785A' }} /> and intention
+            Where quiet hands create gentle magic.
           </p>
         </div>
       </div>

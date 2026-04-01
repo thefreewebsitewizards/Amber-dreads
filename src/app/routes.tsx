@@ -8,6 +8,7 @@ import { PoliciesPage } from './pages/PoliciesPage';
 import { FAQPage } from './pages/FAQPage';
 import { ContactPage } from './pages/ContactPage';
 import { GalleryPage } from './pages/GalleryPage';
+import { AdminPage } from './pages/AdminPage';
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ export const router = createBrowserRouter([
       { path: 'faq', Component: FAQPage },
       { path: 'contact', Component: ContactPage },
       { path: 'gallery', Component: GalleryPage },
+      { path: 'admin', Component: AdminPage },
     ],
   },
 ]);

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router';
-import { Menu, X } from 'lucide-react';
+import { Menu, Settings, X } from 'lucide-react';
 
 const navLinks = [
   { to: '/', label: 'Home' },
@@ -45,9 +45,9 @@ export function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <img
-              src="/Amber-dreads-logo.png"
+              src="/Amber-dreads-new-logo.png"
               alt="Amber Dreads logo"
-              className="h-9 w-9 md:h-10 md:w-10 object-contain"
+              className="h-11 w-11 md:h-12 md:w-12 object-contain"
             />
             <div className="flex flex-col leading-none">
               <span
@@ -57,29 +57,44 @@ export function Navbar() {
                 Chronic Dreads
               </span>
               <span className="text-xs tracking-widest uppercase" style={{ color: '#C4785A', fontFamily: "'Nunito', sans-serif", fontWeight: 600 }}>
-                Handmade with Intention
+                Where quiet hands create gentle magic.
               </span>
             </div>
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.to}
-                to={link.to}
-                className="px-3 py-2 rounded-lg text-sm transition-all duration-200"
-                style={{
-                  fontFamily: "'Nunito', sans-serif",
-                  fontWeight: isActive(link.to) ? 700 : 500,
-                  color: isActive(link.to) ? '#C4785A' : '#3D2518',
-                  background: isActive(link.to) ? '#F5EFE6' : 'transparent',
-                  textDecoration: 'none',
-                }}
-              >
-                {link.label}
-              </Link>
-            ))}
+          <div className="flex items-center gap-2">
+            <div className="hidden lg:flex items-center gap-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  className="px-3 py-2 rounded-lg text-sm transition-all duration-200"
+                  style={{
+                    fontFamily: "'Nunito', sans-serif",
+                    fontWeight: isActive(link.to) ? 700 : 500,
+                    color: isActive(link.to) ? '#C4785A' : '#3D2518',
+                    background: isActive(link.to) ? '#F5EFE6' : 'transparent',
+                    textDecoration: 'none',
+                  }}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+            <Link
+              to="/admin"
+              className="hidden lg:flex h-10 w-10 rounded-full items-center justify-center transition-all duration-200"
+              style={{
+                color: isActive('/admin') ? '#FAF7F2' : '#3D2518',
+                background: isActive('/admin') ? '#C4785A' : '#F5EFE6',
+                border: '1px solid #E8D5C4',
+                textDecoration: 'none',
+              }}
+              aria-label="Open admin"
+            >
+              <Settings size={18} />
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -117,6 +132,20 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <Link
+              to="/admin"
+              className="px-4 py-3 rounded-xl text-base transition-all duration-200 flex items-center gap-2"
+              style={{
+                fontFamily: "'Nunito', sans-serif",
+                fontWeight: isActive('/admin') ? 700 : 500,
+                color: isActive('/admin') ? '#C4785A' : '#3D2518',
+                background: isActive('/admin') ? '#F5EFE6' : 'transparent',
+                textDecoration: 'none',
+              }}
+            >
+              <Settings size={18} />
+              Admin
+            </Link>
           </div>
         </div>
       )}

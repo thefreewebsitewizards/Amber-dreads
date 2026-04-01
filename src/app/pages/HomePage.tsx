@@ -30,7 +30,7 @@ const categories = [
 ];
 
 const features = [
-  { icon: <Sparkles size={22} />, title: 'Handmade', desc: 'Every piece crafted by hand with love and intention.' },
+  { icon: <Sparkles size={22} />, title: 'Handmade', desc: 'Every piece is handmade with care, where quiet hands create gentle magic.' },
   { icon: <Leaf size={22} />, title: 'High‑Quality', desc: 'Premium materials that are soft, durable, and comfortable.' },
   { icon: <Package size={22} />, title: 'Ready to Ship', desc: 'What you see is what I have on hand, ready to go.' },
   { icon: <Scissors size={22} />, title: 'Custom Orders', desc: 'Want a different color? Just message me — I can order it.' },
@@ -75,7 +75,7 @@ export function HomePage() {
               fontWeight: 400,
             }}
           >
-            Dreadlock Extensions & Tools Crafted With Intention
+            Where quiet hands create gentle magic.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
